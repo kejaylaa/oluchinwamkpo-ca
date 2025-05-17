@@ -1,0 +1,143 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    min-width: 347px;
+}
+
+/* Navigation Bar */
+nav {
+    height: 80px;
+    background-color: darkcyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25cm 0.5cm;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    padding: 0.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: beige;
+    padding: 0 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+span {
+    color: orange;
+}
+
+/* Projects Section */
+.projects {
+    background: linear-gradient(135deg, #f6f9fc 0%, #e0f7fa 100%);
+    background-size: cover;
+    min-width: 384.5px;
+    padding: 3rem 1rem;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.intros h1 {
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+    color: #2e3a59;
+    animation: slideInDown 1s ease;
+}
+
+.intros h2 {
+    margin-top: 1rem;
+    font-size: 1.9rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    cursor: pointer;
+    text-decoration: underline;
+    color: brown;
+    transition: color 0.3s;
+}
+
+.intros h2:hover {
+    color: darkorange;
+}
+
+.intros p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #444;
+    animation: fadeInUp 1.2s ease;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 6px solid #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 780px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
+    img:hover {
+        transform: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+}
